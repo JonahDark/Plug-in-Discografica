@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record id="discograficamulti.discograficamulti_model_form_inherit" model="ir.ui.view">
+            <field name="name"> Multi Tarea con extensión de Usuario</field>
+            <field name="model">discografica.entrada_model</field>
+            <field name="inherit_id" ref="discografica.entrada_form" />
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="limpiaEntradasVendidas" position="after">
+                            <button name="eliminaHistorial" type="object" confirm="Desea eliminar el historial de registros" string="Elimina Historial" class="oe_highlight" />
+                        </button>
+                    </header>
+                    <sheet>
+                    </sheet>
+                    <footer></footer>
+                </form>                                                   
+            </field>
+        </record>
+    </data>
+</odoo>
