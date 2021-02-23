@@ -1,25 +1,39 @@
 <odoo>
-    <data>
-      <record id="discograficamulti.discograficamulti_model_form_inherit" model="ir.ui.view">
-        <field name="name"> Multi Discografica con extensión de Usuario</field>
-        <field name="model">discografica.discografica_model</field>
-        <field name="inherit_id" ref="discografica.discografica_form" />
-        <field name="arch" type="xml">
-          <field name="pais" position="after">
-            <field name="director" />
-          </field>
+  <data>
+    <record id="discograficamulti.discograficamulti_model_form_inherit" model="ir.ui.view">
+      <field name="name"> Multi Discografica con extensión de Usuario</field>
+      <field name="model">discografica.discografica_model</field>
+      <field name="inherit_id" ref="discografica.discografica_form" />
+      <field name="arch" type="xml">
+        <field name="pais" position="after">
+          <field name="director" />
         </field>
-      </record>
-  
-      <record id="discograficamulti.discograficamulti_model_tree_inherit" model="ir.ui.view">
-        <field name="name"> Multi Discografica con extensión de Usuario</field>
-        <field name="model">discografica.discografica_model</field>
-        <field name="inherit_id" ref="discografica.discografica_tree" />
-        <field name="arch" type="xml">
-          <field name="pais" position="after">
-            <field name="director" />
-          </field>
+      </field>
+    </record>
+
+    <record id="discograficamulti.discograficamulti_model_tree_inherit" model="ir.ui.view">
+      <field name="name"> Multi Discografica con extensión de Usuario</field>
+      <field name="model">discografica.discografica_model</field>
+      <field name="inherit_id" ref="discografica.discografica_tree" />
+      <field name="arch" type="xml">
+        <field name="pais" position="after">
+          <field name="director" />
         </field>
-      </record>
-    </data>
-  </odoo>
+      </field>
+    </record>
+
+
+    <record id="discograficamulti.discograficamulti_model_form_inherit_boton" model="ir.ui.view">
+      <field name="name"> Multi Discografica con extensión de Usuario</field>
+      <field name="model">discografica.entrada_model</field>
+      <field name="inherit_id" ref="discografica.entrada_form" />
+      <field name="arch" type="xml">
+
+        <button name="limpiaEntradasVendidas" position="after">
+          <button name="eliminaHistorial" type="object" confirm="Desea eliminar el historial de registros" string="Elimina Historial" class="oe_highlight" />
+        </button>
+
+      </field>
+    </record>
+  </data>
+</odoo>
